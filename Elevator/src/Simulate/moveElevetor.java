@@ -2,16 +2,45 @@ package Simulate;
 
 public class moveElevetor {
 	int curFloor,desFloor;
-	
-	moveElevetor(int curFloor,int desFloor)
+	Floor floor;
+	/*moveElevetor(int curFloor,int desFloor)
 	{
 		this.curFloor=curFloor;
 		this.desFloor=desFloor;
+	}*/
+	
+	void move(int floorNum)
+	{
+		curFloor=floor.getCurFloor();
+		System.out.println("Current floor is: " + curFloor);
+		if(floorNum>curFloor)
+			up(floorNum);
+		else
+			down(floorNum);
 	}
 	
-	void move()
+	void up(int floorNum)
 	{
-		System.out.println("Moving.........");
+		curFloor=floor.getCurFloor();
+		System.out.println("Moving up....");
+		while(curFloor!=floorNum)
+		{
+			curFloor++;
+			System.out.println(curFloor);
+			
+		}
+	}
+	
+	void down(int floorNum)
+	{
+		curFloor=floor.getCurFloor();
+		System.out.println("Moving down....");
+		while(curFloor!=floorNum)
+		{
+			curFloor--;
+			System.out.println(curFloor);
+			
+		}
 	}
 
 }
