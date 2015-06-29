@@ -9,7 +9,7 @@ public class moveElevetor {
 		this.desFloor=desFloor;
 	}*/
 	
-	void move(int floorNum)
+	void move(int floorNum,Floor floor)
 	{
 		curFloor=floor.getCurFloor();
 		System.out.println("Current floor is: " + curFloor);
