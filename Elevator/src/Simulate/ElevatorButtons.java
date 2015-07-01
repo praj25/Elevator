@@ -13,7 +13,7 @@ public class ElevatorButtons {
 	}
 
 	public void pressed(int button){
-		moveElevetor elevator = null; 
+		moveElevetor elevator = null;
 		Floor floor = new Floor();
 		
 		for(int i=1;i<=getFloorNo();i++){
