@@ -1,7 +1,8 @@
 package Simulate;
 
 public class Floor {
-	int curFloor;
+
+	int curFloor=0;
 
 	public int getCurFloor() {
 		return curFloor;
@@ -9,5 +10,10 @@ public class Floor {
 
 	public void setCurFloor(int curFloor) {
 		this.curFloor = curFloor;
+		
+	}
+	public void display()
+	{
+		System.out.println("Current floor is: " + curFloor);
 	}
 }
