@@ -2,16 +2,25 @@ package Simulate;
 
 public class ElevatorButtons {
 	//Boolean one,two,three,four;
+	int noOfFloors;
 	
-	public void pressed(String button){
+	public void setFloorNo(int noOfFloors){
+		this.noOfFloors = noOfFloors;
+	}
+	
+	public int getFloorNo(){
+		return noOfFloors;
+	}
+
+	public void pressed(int button){
 		moveElevetor elevator = null; 
 		Floor floor = new Floor();
-		switch(button){
-			case "one": elevator.move(1,floor);break;
-			case "two": elevator.move(2,floor);break;
-			case "three": elevator.move(3,floor);break;
-			case "four": elevator.move(4,floor);
+		
+		for(int i=1;i<=getFloorNo();i++){
+			if(button == i)
+				elevator.move(i,floor);
 		}
+		
 	}
 	
 }
